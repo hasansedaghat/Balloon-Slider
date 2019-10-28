@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ballon_Slider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balloon" translatesAutoresizingMaskIntoConstraints="NO" id="hjh-NF-IYA">
+                                <rect key="frame" x="69" y="262.5" width="37" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="1Rp-fW-lI4"/>
+                                    <constraint firstAttribute="height" constant="49" id="ovS-4C-1KL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCm-0l-Y61">
+                                <rect key="frame" x="72.5" y="271" width="30" height="16.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="TUq-wX-0Ao"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="O9F-DL-CR2">
+                                <rect key="frame" x="72" y="318.5" width="231" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="227" id="Bc5-55-ByR"/>
+                                    <constraint firstAttribute="height" constant="30" id="a2l-Xu-S6g"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="didEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="IVF-SC-j2W"/>
+                                    <action selector="didEndOnExit:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="0Fv-ir-16P"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hjh-NF-IYA" firstAttribute="leading" secondItem="O9F-DL-CR2" secondAttribute="leading" constant="-5" id="2c2-gE-W9k"/>
+                            <constraint firstItem="O9F-DL-CR2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Olw-lc-muT"/>
+                            <constraint firstItem="O9F-DL-CR2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QaY-fG-Ndo"/>
+                            <constraint firstItem="O9F-DL-CR2" firstAttribute="top" secondItem="hjh-NF-IYA" secondAttribute="bottom" constant="7" id="TF0-Ja-Fcb"/>
+                            <constraint firstItem="zCm-0l-Y61" firstAttribute="centerX" secondItem="hjh-NF-IYA" secondAttribute="centerX" id="Yv1-IY-f6v"/>
+                            <constraint firstItem="zCm-0l-Y61" firstAttribute="centerY" secondItem="hjh-NF-IYA" secondAttribute="centerY" constant="-8" id="jP0-0P-V9v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ballonIMG" destination="hjh-NF-IYA" id="3bM-yd-Ben"/>
+                        <outlet property="ballonLabel" destination="zCm-0l-Y61" id="SQ1-x6-0Lo"/>
+                        <outlet property="slider" destination="O9F-DL-CR2" id="675-O0-qwb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.0809595202399"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="balloon" width="44" height="67"/>
+    </resources>
+</document>
